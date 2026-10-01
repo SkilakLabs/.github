@@ -1,0 +1,59 @@
+name: Mesh blocked something safe
+description: Mesh blocked something safe.
+labels:
+- false-positive
+body:
+- type: markdown
+  attributes:
+    value: Never paste API keys, tokens, prompts, file contents or the real value Mesh matched. Review
+      diagnostics and logs for personal data before posting.
+- type: textarea
+  id: version
+  attributes:
+    label: Output of smesh version
+    render: shell
+  validations:
+    required: true
+- type: dropdown
+  id: os
+  attributes:
+    label: OS and architecture
+    options:
+    - macOS arm64
+    - macOS x86_64
+    - Linux x86_64
+    - Windows x86_64
+  validations:
+    required: true
+- type: dropdown
+  id: client
+  attributes:
+    label: Client
+    options:
+    - Claude Code
+    - Codex
+    - both
+    - none
+  validations:
+    required: true
+- type: textarea
+  id: content_kind
+  attributes:
+    label: What kind of content was blocked?
+    description: 'Describe it instead of pasting it, for example: a UUID in a test fixture.'
+  validations:
+    required: true
+- type: input
+  id: category
+  attributes:
+    label: Rule or category Mesh reported
+    description: Enter the displayed name, or "not shown".
+  validations:
+    required: true
+- type: textarea
+  id: example
+  attributes:
+    label: Redacted example with the same shape
+    description: Use made-up values only. Do not include prompts or file contents.
+  validations:
+    required: true

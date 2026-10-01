@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+- name: Report a security vulnerability
+  url: https://github.com/SkilakLabs/smesh/security/advisories/new
+  about: Report vulnerabilities and deliberate bypasses privately.
+- name: Licensing and company use
+  url: https://skilak.ai/mesh/license
+  about: Read the license and company-use options.

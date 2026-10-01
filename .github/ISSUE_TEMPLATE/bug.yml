@@ -1,0 +1,81 @@
+name: Bug report
+description: Report an installation or usage problem.
+labels:
+- bug
+body:
+- type: markdown
+  attributes:
+    value: Never paste API keys, tokens, prompts, file contents or the real value Mesh matched. Review
+      diagnostics and logs for personal data before posting.
+- type: textarea
+  id: version
+  attributes:
+    label: Output of smesh version
+    render: shell
+  validations:
+    required: true
+- type: dropdown
+  id: os
+  attributes:
+    label: OS and architecture
+    options:
+    - macOS arm64
+    - macOS x86_64
+    - Linux x86_64
+    - Windows x86_64
+  validations:
+    required: true
+- type: dropdown
+  id: install
+  attributes:
+    label: Install method
+    options:
+    - install.sh
+    - install.ps1
+    - Homebrew
+    - other
+  validations:
+    required: true
+- type: dropdown
+  id: client
+  attributes:
+    label: Client
+    options:
+    - Claude Code
+    - Codex
+    - both
+    - none
+  validations:
+    required: true
+- type: textarea
+  id: steps
+  attributes:
+    label: What you did
+  validations:
+    required: true
+- type: textarea
+  id: actual
+  attributes:
+    label: What happened
+  validations:
+    required: true
+- type: textarea
+  id: expected
+  attributes:
+    label: What you expected
+  validations:
+    required: true
+- type: textarea
+  id: doctor
+  attributes:
+    label: Output of smesh doctor
+    render: shell
+  validations:
+    required: true
+- type: textarea
+  id: logs
+  attributes:
+    label: smesh logs excerpt (optional)
+    render: shell
+  validations:
+    required: false
