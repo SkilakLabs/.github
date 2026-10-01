@@ -32,7 +32,6 @@ body:
     options:
     - install.sh
     - install.ps1
-    - Homebrew
     - other
   validations:
     required: true
